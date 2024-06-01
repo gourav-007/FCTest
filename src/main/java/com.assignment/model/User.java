@@ -32,4 +32,52 @@ public class User {
 
     @JsonProperty("company")
     private Company company;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Address {
+
+        @JsonProperty("street")
+        private String street;
+
+        @JsonProperty("suite")
+        private String suite;
+
+        @JsonProperty("city")
+        private String city;
+
+        @JsonProperty("zipcode")
+        private String zipcode;
+
+        @JsonProperty("geo")
+        private Geo geo;
+    }
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Geo {
+
+        @JsonProperty("lat")
+        private String lat;
+
+        @JsonProperty("lng")
+        private String lng;
+    }
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class Company {
+
+        @JsonProperty("name")
+        private String name;
+
+        @JsonProperty("catchPhrase")
+        private String catchPhrase;
+
+        @JsonProperty("bs")
+        private String bs;
+    }
 }
